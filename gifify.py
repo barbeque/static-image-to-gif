@@ -1,4 +1,9 @@
 from PIL import Image
+import sys
+
+sys.path.insert(0, './vendor')
+import os
+from images2gif import writeGif
 
 class FrameSettings:
     # set up for SA avatars
@@ -50,7 +55,12 @@ snap_positions = get_pan_locations(fs)
 src = Image.open("resized_cat.png")
 
 i = 0
+filenames = []
 
 for snap in snap_positions:
-    dump_frame(src, snap, "pic" + str(i) + ".png")
+    file_name = "pic" + str(i) + ".png"
+    dump_frame(src, snap, file_name)
+    filenames.append(file_name)
     i = i + 1
+
+writeGif("output.gif", [Image.open(fn) for fn in filenames], duration=0.1)
