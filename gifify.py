@@ -16,10 +16,10 @@ class SnapPosition:
     h = 150
 
 def dump_frame(src, frame_settings, path):
-    x1 = frame_settings.x
-    y1 = frame_settings.y
-    x2 = frame_settings.x + frame_settings.w
-    y2 = frame_settings.y + frame_settings.h
+    x1 = int(frame_settings.x)
+    y1 = int(frame_settings.y)
+    x2 = int(frame_settings.x + frame_settings.w)
+    y2 = int(frame_settings.y + frame_settings.h)
     cropped = src.crop((x1, y1, x2, y2))
     cropped.save(path)
 
@@ -47,7 +47,7 @@ fs.y = 10
 fs.stop_x = 256
 snap_positions = get_pan_locations(fs)
 
-src = Image.open("resized_cat.jpg")
+src = Image.open("resized_cat.png")
 
 i = 0
 
