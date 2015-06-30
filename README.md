@@ -9,10 +9,13 @@ It's a project to make animated gifs out of panning or otherwise manipulating a 
  * Lissajous- or other function-based panning
  * Zooming
  * Rotation
+ * Shaking
 
 ## Future (planned) features
  * Customizable settings
  * Customizable looping settings (infinite loop, single loop, forwards-backwards)
+ * Palette modification (flashing via inverted palette)
+ * Adding text at a given frame
 
 # How to use
 Install instructions are similar to other Python projects:
