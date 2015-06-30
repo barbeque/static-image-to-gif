@@ -47,7 +47,7 @@ def get_pan_locations(frame_settings, number_of_frames = 10):
     return snap_positions
 
 fs = FrameSettings()
-fs.start_x = 18
+fs.start_x = 30
 fs.y = 65
 fs.stop_x = 230 - 150
 snap_positions = get_pan_locations(fs)
@@ -58,6 +58,13 @@ i = 0
 filenames = []
 
 for snap in snap_positions:
+    file_name = "pic" + str(i) + ".png"
+    dump_frame(src, snap, file_name)
+    filenames.append(file_name)
+    i = i + 1
+
+# go backwards to loop
+for snap in reversed(snap_positions):
     file_name = "pic" + str(i) + ".png"
     dump_frame(src, snap, file_name)
     filenames.append(file_name)
