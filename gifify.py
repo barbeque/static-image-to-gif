@@ -11,8 +11,8 @@ class FrameSettings:
     height = 150
     # todo: support more than horizontal pane one day
     start_x = 0
-    y = 27
-    stop_x = 80
+    y = 0
+    stop_x = 80 # 230 - 150
 
 class SnapPosition:
     x = 0
@@ -48,8 +48,8 @@ def get_pan_locations(frame_settings, number_of_frames = 10):
 
 fs = FrameSettings()
 fs.start_x = 18
-fs.y = 10
-fs.stop_x = 256
+fs.y = 65
+fs.stop_x = 230 - 150
 snap_positions = get_pan_locations(fs)
 
 src = Image.open("resized_cat.png")
