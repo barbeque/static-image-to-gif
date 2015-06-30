@@ -1,6 +1,19 @@
 # What is this?
 It's a project to make animated gifs out of panning or otherwise manipulating a static image programmatically.
 
+## Current effects
+ * Panning horizontally
+
+## Future (planned) effects
+ * Linear panning in any direction
+ * Lissajous- or other function-based panning
+ * Zooming
+ * Rotation
+
+## Future (planned) features
+ * Customizable settings
+ * Customizable looping settings (infinite loop, single loop, forwards-backwards)
+
 # How to use
 Install instructions are similar to other Python projects:
  * Install all third party libraries using `pip install -r requirements.txt`.
