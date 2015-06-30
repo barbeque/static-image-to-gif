@@ -16,6 +16,7 @@ It's a project to make animated gifs out of panning or otherwise manipulating a 
  * Customizable looping settings (infinite loop, single loop, forwards-backwards)
  * Palette modification (flashing via inverted palette)
  * Adding text at a given frame
+ * Compression of resulting frames (reduction in colour count, lossy gif compression) resulting in smaller final animated GIF sizes
 
 # How to use
 Install instructions are similar to other Python projects:
